@@ -18,13 +18,13 @@ class OneSignal
     
     public function __construct(Client $client, Container $app)
     {
-        $config = $app->make('config');
+        $config = app('config');
         
         $this->client = $client;
         
         $this->appId = $config->get('oneSignal.appId');
         
-        $this->API_KEY = 'Basic ' . $config->get('oneSignal.ONESIGNAL_APP_KEY');
+        $this->API_KEY = 'Basic ' . $config->get('oneSignal.appKey');
         
         $this->Authorization = 'Basic ' . $config->get('oneSignal.user_auth_key');
         
