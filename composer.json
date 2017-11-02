@@ -5,8 +5,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "moathdev",
-      "email": "Moath@moath.co"
+      "name": "donkfather",
+      "email": "tudor.popescu@bhdevelopment.ro"
     }
   ],
   "minimum-stability": "stable",
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Moathdev\\OneSignal\\": "src/"
+      "Donkfather\\OneSignal\\": "src/"
     }
   }
 }
