@@ -1,6 +1,6 @@
 <?php
 
-namespace Moathdev\OneSignal\Exceptions;
+namespace Donkfather\OneSignal\Exceptions;
 
 use Exception;
 
