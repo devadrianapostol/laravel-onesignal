@@ -1,6 +1,6 @@
 <?php
 
-namespace Moathdev\OneSignal\Facade;
+namespace Donkfather\OneSignal\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -13,6 +13,6 @@ class OneSignal extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return \Moathdev\OneSignal\OneSignal::class;
+        return \Donkfather\OneSignal\OneSignal::class;
     }
 }
