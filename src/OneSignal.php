@@ -1,12 +1,12 @@
 <?php
 
-namespace Moathdev\OneSignal;
+namespace Donkfather\OneSignal;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Contracts\Container\Container;
-use Moathdev\OneSignal\Exceptions\FailedToSendNotificationException;
+use Donkfather\OneSignal\Exceptions\FailedToSendNotificationException;
 
 class OneSignal
 {
