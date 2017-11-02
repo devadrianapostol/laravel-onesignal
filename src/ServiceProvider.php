@@ -1,6 +1,6 @@
 <?php
 
-namespace Moathdev\OneSignal;
+namespace Donkfather\OneSignal;
 
 use GuzzleHttp\Client;
 use Illuminate\Contracts\Container\Container;
