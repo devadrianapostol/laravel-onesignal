@@ -9,7 +9,7 @@
       "email": "tudor.popescu@bhdevelopment.ro"
     }
   ],
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
     "illuminate/support": "~5.1",
