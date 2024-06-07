@@ -110,9 +110,9 @@ class OneSignal {
 					    	"mutable-content": 1
 											*/
 						"alert" => [
-						    "title" => $title,
+						    "title" => $headings,
 						    "subtitle" => "",
-						    "body" => "$massage",
+						    "body" => "$contents",
 						    
 						],
 						"mutable_content" => 1,
