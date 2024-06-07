@@ -1,6 +1,6 @@
 <?php
 
-namespace Donkfather\OneSignal\Facade;
+namespace Devadrianapostol\OneSignal\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
