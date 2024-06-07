@@ -1,5 +1,5 @@
 {
-  "name": "donkfather/laravel-onesignal",
+  "name": "devadrianapostol/laravel-onesignal",
   "description": "A Onesignal package for Laravel 5.2 or higher",
   "type": "package",
   "license": "MIT",
