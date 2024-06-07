@@ -13,6 +13,6 @@ class OneSignal extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return \Donkfather\OneSignal\OneSignal::class;
+        return \Devadrianapostol\OneSignal\OneSignal::class;
     }
 }
