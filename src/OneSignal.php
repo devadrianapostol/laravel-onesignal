@@ -101,6 +101,21 @@ class OneSignal {
 						'include_player_ids' => $OneSignalIds,
 						'headings'           => $headings,
 						'contents'           => $contents,
+										/*
+											"alert": {
+					            "title": "Beautiful View",
+					            "subtitle": "",
+					            "body" : "Denali, Alaska",
+					        },
+					    	"mutable-content": 1
+											*/
+						"alert" => [
+						    "title" => $title,
+						    "subtitle" => "",
+						    "body" => "$massage",
+						    
+						],
+						"mutable_content" => 1,
 				];
 				
 				if (isset($data))
