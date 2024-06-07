@@ -109,6 +109,50 @@ class OneSignal {
 					        },
 					    	"mutable-content": 1
 											*/
+					
+				];
+				
+				if (isset($data))
+				{
+						$params['data'] = $data;
+				}
+				
+				if (isset($url))
+				{
+						$params['url'] = $url;
+				}
+				
+				if (isset($button))
+				{
+						$params['buttons'] = $buttons;
+				}
+				
+				return $this->post($params, 'notifications', $this->API_KEY);
+		}
+
+	public function SendNotificationToSpecificUsersAdy(
+				$headings,
+				$contents,
+				$OneSignalIds = [],
+				$data = [],
+				$url = null,
+				$buttons = null
+		)
+		{
+				
+				$params = [
+						'app_id'             => $this->appId,
+						'include_player_ids' => $OneSignalIds,
+						'headings'           => $headings,
+						'contents'           => $contents,
+										/*
+											"alert": {
+					            "title": "Beautiful View",
+					            "subtitle": "",
+					            "body" : "Denali, Alaska",
+					        },
+					    	"mutable-content": 1
+											*/
 						"alert" => [
 						    "title" => $headings,
 						    "subtitle" => "",
