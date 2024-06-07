@@ -6,7 +6,7 @@ namespace Devadrianapostol\OneSignal;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Contracts\Container\Container;
-use Donkfather\OneSignal\Exceptions\FailedToSendNotificationException;
+use Devadrianapostol\OneSignal\Exceptions\FailedToSendNotificationException;
 
 class OneSignal {
 		
