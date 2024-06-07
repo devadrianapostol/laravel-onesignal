@@ -156,7 +156,7 @@ class OneSignal {
 						"alert" => [
 						    "title" => $headings,
 						    "subtitle" => "",
-						    "body" => "$contents",
+						    "body" => $contents,
 						    
 						],
 						"mutable_content" => 1,
