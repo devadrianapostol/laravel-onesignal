@@ -1,6 +1,6 @@
 <?php
 
-namespace Donkfather\OneSignal\Exceptions;
+namespace Devadrianapostol\OneSignal\Exceptions;
 
 use Exception;
 
