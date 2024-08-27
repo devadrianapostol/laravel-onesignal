@@ -6,7 +6,7 @@ namespace Devadrianapostol\OneSignal;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Contracts\Container\Container;
-use Donkfather\OneSignal\Exceptions\FailedToSendNotificationException;
+use Devadrianapostol\OneSignal\Exceptions\FailedToSendNotificationException;
 
 class OneSignal {
 		
@@ -71,7 +71,7 @@ class OneSignal {
 						$params['buttons'] = $buttons;
 				}
 				
-				return $this->post($params, 'notifications', $this->API_KEY);
+				return $this->post($params, 'notifications', $this->Authorization);
 		}
 		
 		/**
@@ -109,10 +109,54 @@ class OneSignal {
 					        },
 					    	"mutable-content": 1
 											*/
+					
+				];
+				
+				if (isset($data))
+				{
+						$params['data'] = $data;
+				}
+				
+				if (isset($url))
+				{
+						$params['url'] = $url;
+				}
+				
+				if (isset($button))
+				{
+						$params['buttons'] = $buttons;
+				}
+				
+				return $this->post($params, 'notifications', $this->Authorization);
+		}
+
+	public function SendNotificationToSpecificUsersAdy(
+				$headings,
+				$contents,
+				$OneSignalIds = [],
+				$data = [],
+				$url = null,
+				$buttons = null
+		)
+		{
+				
+				$params = [
+						'app_id'             => $this->appId,
+						'include_player_ids' => $OneSignalIds,
+						'headings'           => $headings,
+						'contents'           => $contents,
+										/*
+											"alert": {
+					            "title": "Beautiful View",
+					            "subtitle": "",
+					            "body" : "Denali, Alaska",
+					        },
+					    	"mutable-content": 1
+											*/
 						"alert" => [
-						    "title" => $title,
+						    "title" => $headings,
 						    "subtitle" => "",
-						    "body" => "$massage",
+						    "body" => $contents,
 						    
 						],
 						"mutable_content" => 1,
@@ -133,7 +177,7 @@ class OneSignal {
 						$params['buttons'] = $buttons;
 				}
 				
-				return $this->post($params, 'notifications', $this->API_KEY);
+				return $this->post($params, 'notifications', $this->Authorization);
 		}
 		
 		
@@ -219,7 +263,7 @@ class OneSignal {
 			*/
 		public function ViewDevices($limit = null, $offset = null)
 		{
-				return $this->get('players?app_id=' . $this->appId . '&limit=' . $limit . '&offset=' . $offset, $this->API_KEY);
+				return $this->get('players?app_id=' . $this->appId . '&limit=' . $limit . '&offset=' . $offset, $this->Authorization);
 		}
 		
 		
