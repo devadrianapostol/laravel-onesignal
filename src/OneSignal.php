@@ -136,13 +136,15 @@ class OneSignal {
 				$OneSignalIds = [],
 				$data = [],
 				$url = null,
-				$buttons = null
+				$buttons = null,
+				$tenantIds=[]
 		)
 		{
 				
 				$params = [
 						'app_id'             => $this->appId,
 						'include_player_ids' => $OneSignalIds,
+						'include_external_user_ids' => count($tenantIds) > 0 ? array_map('strval', $tenantIds ) : [],
 						'headings'           => $headings,
 						'contents'           => $contents,
 										/*
