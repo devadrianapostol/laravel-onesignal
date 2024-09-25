@@ -8,6 +8,7 @@ use GuzzleHttp\Exception\ClientException;
 use Illuminate\Contracts\Container\Container;
 use Devadrianapostol\OneSignal\Exceptions\FailedToSendNotificationException;
 
+
 class OneSignal {
 		
 		/**
@@ -140,11 +141,17 @@ class OneSignal {
 				$tenantIds=[]
 		)
 		{
+		    \Illuminate\Support\Facades\Log::info('devadrian OSIds to send to: ' . json_encode($tenantIds));
 				
 				$params = [
 						'app_id'             => $this->appId,
 						'include_player_ids' => $OneSignalIds,
-						'include_external_user_ids' => count($tenantIds) > 0 ? array_map('strval', $tenantIds ) : [],
+						'include_external_user_ids' => count($tenantIds) > 0 ? $tenantIds : [],
+						'include_aliases' => [
+						    'external_id' => count($tenantIds) > 0 ? $tenantIds : [],
+						    'onesignal_id' => $OneSignalIds,
+						],
+						"target_channel" => "push",
 						'headings'           => $headings,
 						'contents'           => $contents,
 										/*
