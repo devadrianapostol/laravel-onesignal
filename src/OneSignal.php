@@ -49,6 +49,7 @@ class OneSignal {
 				$params = [
 						'app_id'            => $this->appId,
 						'included_segments' => ['All'],
+					'large_icon'        => 'ic_stat_onesignal_default',
 						'headings'          => [
 								'en' => $title,
 						],
@@ -100,6 +101,7 @@ class OneSignal {
 				$params = [
 						'app_id'             => $this->appId,
 						'include_player_ids' => $OneSignalIds,
+					'large_icon'        => 'ic_stat_onesignal_default',
 						'headings'           => $headings,
 						'contents'           => $contents,
 										/*
@@ -146,6 +148,7 @@ class OneSignal {
 				$params = [
 						'app_id'             => $this->appId,
 						'include_player_ids' => $OneSignalIds,
+					'large_icon'        => 'ic_stat_onesignal_default',
 						'include_external_user_ids' => count($tenantIds) > 0 ? $tenantIds : [],
 						'include_aliases' => [
 						    'external_id' => count($tenantIds) > 0 ? $tenantIds : [],
